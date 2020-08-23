@@ -21,42 +21,28 @@ class _PlanetMarsState extends State<PlanetMars> {
                 style: TextStyle(
                     color: Colors.white,
                     fontFamily: "GoogleSansRegular",
-                    fontSize: 15.0),
+                    fontSize: 20.0),
               ),
             ),
-            SizedBox(width: 120.0),
+            SizedBox(width: 170.0),
             Expanded(
               child: Text(
-                "High $max C",
+                "High: $max°C",
                 style: TextStyle(
                   color: Colors.white,
                   fontFamily: "GoogleSansRegular",
-                  fontSize: 15.0,
-                  fontWeight: FontWeight.w100,
+                  fontSize: 20.0,
                 ),
               ),
             ),
-            SizedBox(height: 10.0),
             Expanded(
               child: Text(
-                "Today ",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 15.0,
-                    fontFamily: "GoogleSansRegular",
-                    fontWeight: FontWeight.w100),
-              ),
-            ),
-            SizedBox(width: 120.0),
-            Expanded(
-              child: Text(
-                "Low: $min C",
+                "Low: $min°C",
                 textAlign: TextAlign.start,
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 15.0,
+                  fontSize: 20.0,
                   fontFamily: "GoogleSansRegular",
-                  fontWeight: FontWeight.w100,
                 ),
               ),
             ),
@@ -64,7 +50,7 @@ class _PlanetMarsState extends State<PlanetMars> {
         ),
         SizedBox(height: 10.0),
         Container(
-          height: 3.0,
+          height: 2.0,
           width: double.infinity,
           color: Colors.white,
         ),
@@ -119,7 +105,7 @@ class _PlanetMarsState extends State<PlanetMars> {
           ),
         ),
         child: Padding(
-          padding: EdgeInsets.only(top: 30, bottom: 15, left: 15, right: 15),
+          padding: EdgeInsets.only(top: 40, bottom: 15, left: 15, right: 15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,26 +114,22 @@ class _PlanetMarsState extends State<PlanetMars> {
                 "Latest Weather\nat Elysium Planitia",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 38,
+                  fontSize: 38.0,
                   fontWeight: FontWeight.normal,
                   fontFamily: 'GoogleSansRegular',
                 ),
               ),
-              SizedBox(
-                height: 15.0,
-              ),
+              SizedBox(height: 20.0),
               Text(
                 "InSight is taking daily weather measurements (temperature, wind, pressure) on the surface of Mars at Elysiom Planitia, a flat, smooth plain near Mars' equator.",
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 15,
+                  fontSize: 15.0,
                   fontWeight: FontWeight.w300,
                   fontFamily: 'GoogleSansMedium',
                 ),
               ),
-              SizedBox(
-                height: 20,
-              ),
+              SizedBox(height: 20),
               Row(
                 children: <Widget>[
                   Expanded(
@@ -166,7 +148,7 @@ class _PlanetMarsState extends State<PlanetMars> {
                       "High: ${(weatherData[0]["mx"]).ceil()}C",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 28.0,
+                        fontSize: 25.0,
                         fontWeight: FontWeight.w300,
                         fontFamily: 'GoogleSansRegular',
                       ),
@@ -195,7 +177,7 @@ class _PlanetMarsState extends State<PlanetMars> {
                       "Low: ${(weatherData[0]["mn"]).ceil()}C",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 28.0,
+                        fontSize: 25.0,
                         fontWeight: FontWeight.w300,
                         fontFamily: 'GoogleSansRegular',
                       ),
@@ -204,19 +186,12 @@ class _PlanetMarsState extends State<PlanetMars> {
                 ],
               ),
               SizedBox(
-                height: 60.0,
+                height: 20.0,
               ),
-              Text(
-                "Previous Days",
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w800,
-                  fontFamily: "GoogleSansRegular",
-                  fontSize: 18.0,
-                ),
-              ),
-              SizedBox(
-                height: 10.0,
+              Container(
+                height: 0.5,
+                width: double.infinity,
+                color: Colors.white10,
               ),
               Expanded(
                 child: ListView.builder(
